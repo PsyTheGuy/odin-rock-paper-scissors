@@ -15,7 +15,7 @@ function playRound(playerSelection, computerSelection) {
     //  create object to store results
     let result = {};
 
-    //  determine the winner
+    //  determine the result and save it to the result object
     if (playerSelection > computerSelection || playerSelection === 0 && computerSelection === 2) {
         result.message = `You Won! ${choiceList[playerSelection]} beats ${choiceList[computerSelection]}`;
         result.winner = "player";
@@ -27,6 +27,7 @@ function playRound(playerSelection, computerSelection) {
         result.winner = "computer";
     };
 
+    //  return the result object
     return result;
 }
 
