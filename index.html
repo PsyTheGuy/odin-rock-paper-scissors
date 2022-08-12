@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Rock Paper Scissors</title>
-    </head>
-    <body>
-        <script src="./script.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <link href="./styles.css" rel="Stylesheet">
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+<!--  container with game score  -->
+    <div class="container" id="score-panel">
+      <div class="content row ui" id="score-ui">
+        <div class="content row">
+          <div class="content col" id="player-id">
+            <image class="avatar" src="./images/player.png"/>
+            <p class="name">Player</p>
+          </div>
+          <p class="score text visible" id="player-score">0</p>
+        </div>
+        <p class="text visible">VS</p>
+        <div class="content row">
+          <p class="score text visible" id="computer-score">0</p> 
+          <div class="content col" id="computer-id">    
+            <image class="avatar" src="./images/computer.png"/>
+            <p class="name">Computer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--  container with pregame content  -->
+    <div class="container" id="pregame-panel">
+      <div class="content col ui" id="pregame-ui">
+        <image src="./images/rps.png" />
+        <p>Let's play Rock, Paper, Scissors!</p>
+        <button class="start-btn">Start Game</button>                
+      </div>
+    </div>
+<!--  container with game content  -->
+    <div class="container" id="ingame-panel">
+      <div class="content col ui" id="ingame-ui">
+        <p class="text" id="ingame-msg"></p>
+        <div class="content row" id="choice-cards">
+          <div class="card">
+            <image class="card-img" src="./images/rock.png" />
+            <p class="card-text">Rock</p>
+          </div>
+          <div class="card">
+            <image class="card-img" src="./images/paper.png" />
+            <p class="card-text">Paper</p>
+          </div>
+          <div class="card">
+            <image class="card-img" src="./images/scissors.png" />
+            <p class="card-text">Scissors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--  overlay to display game status and game result  -->
+    <div class="overlay">
+      <div class="overlay-bg-top"></div>
+      <p class="overlay-msg"></p>
+      <div class="overlay-bg-bot"></div>       
+    </div>        
+  </body>
 </html>
